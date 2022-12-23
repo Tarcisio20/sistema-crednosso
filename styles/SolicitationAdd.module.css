@@ -1,0 +1,108 @@
+.container {
+    
+}
+
+.box{
+    max-width: 1400px;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.areaTotal{
+    width: 100%;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.areaLeft, .areaRight{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.areaBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.line{
+    width: 100%;
+    margin: 10px 0;
+    border: 1px solid #CCC;
+}
+
+.boxCustody{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.boxCustody input {
+    width: 50%;
+}
+
+.containerValueReal{
+    height: 40px;
+    padding: 5px;
+}
+
+.valueReal{
+    height: 100%;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 12px;
+    border: 1px solid #333;
+    padding: 0 10px;
+}
+
+.valuesTotal{
+    width: 30%;
+    height: 40px;
+    margin-top: 10px;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #CCC;
+    font-weight: 600;
+}
+
+.observation{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.observation textarea {
+    width: 80%;
+    height: 80px;
+
+}
+
+.list {
+    background-color: #DDD;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    width: 100%;
+    height: 80%;
+    padding: 5px;
+}

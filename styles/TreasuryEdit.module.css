@@ -1,0 +1,73 @@
+.container {
+
+}
+
+.box{
+    max-width: 1600px;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxInputs, .boxComposition{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.boxInputs h3, .boxComposition h3{
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 0 20px ;
+}
+
+.boxCustody{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.boxCustody input {
+    width: 50%;
+}
+
+.containerValueReal{
+    height: 40px;
+    padding: 5px;
+}
+
+.valueReal{
+    height: 100%;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 12px;
+    border: 1px solid #333;
+    padding: 0 10px;
+}
+
+.valuesTotal{
+    width: 30%;
+    height: 40px;
+    margin-top: 10px;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #CCC;
+    font-weight: 600;
+}
+
+.boxButton{
+    max-width: 1600px;
+}

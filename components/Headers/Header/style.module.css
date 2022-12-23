@@ -1,0 +1,44 @@
+.container {
+    background-color: #007dc5;
+    padding: 20px 50px 0 50px;
+    box-sizing: border-box;
+}
+
+.container h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.boxLogo{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.menu{}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li{
+    background-color: #007dc5;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFF;
+    text-transform: uppercase;
+    border-bottom: 4px solid #007dc5;
+    transition: .2s ease;
+}
+
+.menu ul li:hover, .active{
+    background-color: #0e73ae;
+    border-bottom: 4px solid #ef4a43;
+}
