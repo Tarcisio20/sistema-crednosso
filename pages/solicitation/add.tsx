@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import { BoxInput } from "../../components/BoxInput";
+import { BoxSelect } from "../../components/BoxSelect";
 import { ButtonSystem } from "../../components/Buttons/ButtonSystem";
 import { ButtonTables } from "../../components/Buttons/ButtonTables";
 import { HeaderPersonal } from "../../components/Headers/Header";
@@ -14,7 +15,8 @@ const SolicitationAdd = () => {
   const helppers = useHelppers();
 
   const [idSolicitation, setIdSolicitation] = useState("");
-  const [nameSolicitation, setNameSolicitation] = useState("");
+  const [idOriginSolicitation, setIdOriginSolicitation] = useState("");
+  const [idDestinySolicitation, setIdDestinySolicitation] = useState("");
   const [dateSolicitation, setDateSolicitation] = useState("00/00/0000");
   const [dateSolicitationSearch, setDateSolicitationSearch] =
     useState("00/00/0000");
@@ -24,6 +26,9 @@ const SolicitationAdd = () => {
   const [value50, setValue50] = useState("0");
   const [value100, setValue100] = useState("0");
   const [valueTotal, setValueTotal] = useState(0);
+
+  const [idSelectedOrigin, setIdSelectedOrigin] = useState("");
+  const [idSelectedDestiny, setIdSelectedDestiny] = useState("");
 
   return (
     <div className={styles.container}>
@@ -48,13 +53,42 @@ const SolicitationAdd = () => {
                 value={idSolicitation}
                 onChange={setIdSolicitation}
               />
-
-              <BoxInput
-                type="text"
-                label="NOME"
-                value={nameSolicitation}
-                onChange={setNameSolicitation}
-              />
+              <div className={styles.boxInputForId}>
+                <BoxInput
+                  type="number"
+                  label="ID ORIGEM"
+                  value={idOriginSolicitation}
+                  onChange={setIdOriginSolicitation}
+                />
+                <BoxSelect
+                  label="ORIGEM"
+                  data={[
+                    { id: "1", name: "OPCAO 1" },
+                    { id: "2", name: "OPCAO 2" },
+                    { id: "3", name: "OPCAO 3" },
+                  ]}
+                  value={idSelectedOrigin}
+                  onChange={setIdSelectedOrigin}
+                />
+              </div>
+              <div className={styles.boxInputForId}>
+                <BoxInput
+                  type="number"
+                  label="ID DESTINO"
+                  value={idDestinySolicitation}
+                  onChange={setIdDestinySolicitation}
+                />
+                <BoxSelect
+                  label="ORIGEM"
+                  data={[
+                    { id: "1", name: "OPCAO 1" },
+                    { id: "2", name: "OPCAO 2" },
+                    { id: "3", name: "OPCAO 3" },
+                  ]}
+                  value={idSelectedDestiny}
+                  onChange={setIdSelectedDestiny}
+                />
+              </div>
 
               <BoxInput
                 type="date"

@@ -10,13 +10,13 @@
 }
 
 .box label {
-  width: 100px;
+  width: 30%;
   height: 30px;
   margin-right: 10px;
 }
 
 .box input {
-  flex: 1;
+  width: 70%;
   height: 30px;
   border: 1px solid #999;
   border-radius: 5px;

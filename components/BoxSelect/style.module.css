@@ -1,28 +1,24 @@
 .container {
-    min-width: 800px;
-    padding: 5px;
-    display: flex;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
-.box{
-    min-width: 80%;
-    max-height: 100%;
-    display: flex;
+.box {
+  min-width: 100%;
+  max-height: 100%;
+  display: flex;
 }
 
 .box label {
-    width: 100px;
-    height: 30px;
-    margin-right: 10px;
+  width: 30%;
+  height: 30px;
+  margin-right: 10px;
 }
 
 .box select {
-    flex: 1;
-    height: 30px;
-    border: 1px solid #999;
-    border-radius: 5px;
-    padding: 0 10px;
-    outline: 0;
+  width: 70%;
+  height: 30px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding: 0 10px;
+  outline: 0;
 }
