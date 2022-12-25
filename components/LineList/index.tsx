@@ -1,13 +1,21 @@
-import styles from './style.module.css'
+import Link from "next/link";
+import styles from "./style.module.css";
 
-export const LineList = () => {
-    return(
-        <div className={styles.container}>
-         <input type="checkbox" />
-            <div>1015</div>
-            <div>TRANSPORTADORA 1</div>
-            <div>R$ 150.000,00</div>
-            <div>[VER]</div>
-        </div>
-    )
-}
+type Props = {
+  id: string;
+  label: string;
+  value: string;
+};
+
+export const LineList = ({ id, label, value }: Props) => {
+  return (
+    <div className={styles.container}>
+      <input type="checkbox" />
+      <div>{label}</div>
+      <div>{value}</div>
+      <div>
+        <Link href={`/solicitation/edit/${id}`}>VER</Link>
+      </div>
+    </div>
+  );
+};
