@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
+import Select from 'react-select'
 import { BoxInput } from "../../components/BoxInput";
-import { BoxSelect } from "../../components/BoxSelect";
 import { ButtonSystem } from "../../components/Buttons/ButtonSystem";
 import { ButtonTables } from "../../components/Buttons/ButtonTables";
 import { HeaderPersonal } from "../../components/Headers/Header";
@@ -30,6 +30,12 @@ const SolicitationAdd = () => {
   const [idSelectedOrigin, setIdSelectedOrigin] = useState("");
   const [idSelectedDestiny, setIdSelectedDestiny] = useState("");
 
+  const options = [
+    { value: '1', label: 'Opção 1' },
+    { value: '1', label: 'Opção 2' },
+    { value: '3', label: 'Opção 3' }
+  ]
+
   return (
     <div className={styles.container}>
       <Head>
@@ -40,182 +46,196 @@ const SolicitationAdd = () => {
 
       <HeaderPersonal slug="solicitation" />
 
-      <div className={styles.box}>
-        <HeaderInPage text="Solicitação | Adicionar" slug="solicitation" />
+        <div className={styles.box}>
+          <HeaderInPage text="Solicitação | Adicionar" slug="solicitation" />
+          <div className={styles.areaTotal}>
+            <div className={styles.areaLeft}>
+              <h3>Area Pedido</h3>
+              <div className={styles.areaBox}>
+                <div className={styles.areaBoxIndividual}>
+                  <h4 className={styles.areaBoxIndivisualTitle}>TIPO</h4>
+                  <Select className={styles.boxSelect} options={options} placeholder="Escolha o tipo" />
+                </div>
+                <div className={styles.areaBoxIndividual}>
+                    <h4 className={styles.areaBoxIndivisualTitle}>ID NO SISTEMA</h4>
+                    <BoxInput
+                    type="number"
+                    value={idSolicitation}
+                    onChange={setIdSolicitation}
+                  />
+                </div>
 
-        <div className={styles.areaTotal}>
-          <div className={styles.areaLeft}>
-            <h3>Area Pedido</h3>
-            <div className={styles.areaBox}>
-              <BoxInput
-                type="number"
-                label="ID"
-                value={idSolicitation}
-                onChange={setIdSolicitation}
-              />
-              <div className={styles.boxInputForId}>
+                <div className={styles.areaBoxIndividual}>
+                  <h4 className={styles.areaBoxIndivisualTitle}>ID origem</h4>
+                  <BoxInput
+                    type="number"
+                    value={idOriginSolicitation}
+                    onChange={setIdOriginSolicitation}
+                  />
+                </div>
+
+                <div className={styles.areaBoxIndividual}>
+                  <h4 className={styles.areaBoxIndivisualTitle}>transp. origem</h4>
+                  <Select className={styles.boxSelect} options={options} placeholder="Transportadora de origem" />
+                </div>
+
+                <div className={styles.areaBoxIndividual}>
+                  <h4 className={styles.areaBoxIndivisualTitle}>id destino</h4>
+                  <BoxInput
+                    type="number"
+                    value={idDestinySolicitation}
+                    onChange={setIdDestinySolicitation}
+                  />
+                </div>
+
+                <div className={styles.areaBoxIndividual}>
+                  <h4 className={styles.areaBoxIndivisualTitle}>transp. destino</h4>
+                  <Select className={styles.boxSelect} options={options} placeholder="Transportadora de destino" />
+                </div>
+
+                <div className={styles.areaBoxIndividual}>
+                  <h4 className={styles.areaBoxIndivisualTitle}>data pedido</h4> 
+                  <BoxInput
+                    type="date"
+                    value={dateSolicitation}
+                    onChange={setDateSolicitation}
+                  />
+                </div>
+
+                <div className={styles.line}></div>
+                <div className={styles.boxCustody}>
+                  <div className={styles.areaBoxIndividual}>
+                    <h4 className={styles.areaBoxIndivisualTitle}>R$ 10,00</h4> 
+                    <BoxInput
+                      type="text"
+                      value={value10}
+                      onChange={setValue10}
+                    />
+                    <div className={styles.containerValueReal}>
+                      <div className={styles.valueReal}>
+                        {helppers.handleTransforInReal(
+                        helppers.handleCalcCassInReject("10", value10, 0)
+                        )}
+                      </div>
+                    </div>
+                   </div>
+                </div>
+                
+                <div className={styles.boxCustody}>
+                  <div className={styles.areaBoxIndividual}>
+                      <h4 className={styles.areaBoxIndivisualTitle}>R$ 20,00</h4> 
+                      <BoxInput
+                        type="text"
+                        value={value20}
+                        onChange={setValue20}
+                      />
+                    <div className={styles.containerValueReal}>
+                      <div className={styles.valueReal}>
+                        {helppers.handleTransforInReal(
+                          helppers.handleCalcCassInReject("20", value20, 0)
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+
+                <div className={styles.boxCustody}>
+                  <div className={styles.areaBoxIndividual}>
+                      <h4 className={styles.areaBoxIndivisualTitle}>R$ 50,00</h4> 
+                      <BoxInput
+                        type="text"
+                        value={value50}
+                        onChange={setValue50}
+                      />
+                      <div className={styles.containerValueReal}>
+                        <div className={styles.valueReal}>
+                          {helppers.handleTransforInReal(
+                            helppers.handleCalcCassInReject("50", value50, 0)
+                          )}
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              
+                <div className={styles.boxCustody}>
+                <div className={styles.areaBoxIndividual}>
+                      <h4 className={styles.areaBoxIndivisualTitle}>R$ 100,00</h4>
+                      <BoxInput
+                        type="text"
+                        value={value100}
+                        onChange={setValue100}
+                      />
+                      <div className={styles.containerValueReal}>
+                        <div className={styles.valueReal}>
+                          {helppers.handleTransforInReal(
+                            helppers.handleCalcCassInReject("100", value100, 0)
+                          )}
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                        
+                <div className={styles.valuesTotal}>
+                    {helppers.handleTransforInReal(
+                      helppers.handleCalcTotal(value10, value20, value50, value100)
+                    )}
+                </div>
+                
+                <div className={styles.observation}>
+                  <h3>Observação</h3>
+                  <textarea></textarea>
+                </div>
+                
+                <div className={styles.areaButton}>
+                  <ButtonSystem label="Adicionar" icon="save-white" />
+                  <ButtonSystem label="Solicitações" icon="view-white" slug="/solicitation/view" />
+                </div>
+
+              </div>
+            </div>
+            
+            <div className={styles.areaRight}>
+              <h3>Pedidos Realizados</h3>
+              <div className={styles.list}>
+                <LineList id="1" label="Transportadora 1" value="R$ 18.000,00" />
+                <LineList id="2" label="Transportadora 2" value="R$ 250.000,00" />
+                <LineList
+                  id="3"
+                  label="Transportadora 3"
+                  value="R$ 1.000.000,00"
+                />
+                <LineList id="4" label="Transportadora 4" value="R$ 18.000,00" />
+              </div>
+                <div className={styles.boxButtons}>
+                <ButtonTables
+                  label="Excluir"
+                  colorText="#FFFFFF"
+                  colorPrimary="#c33a3a"
+                  colorSecondary="#f12d2d"
+                  link={`solicitation/delete/1`}
+                  icon="delete-white"
+                />
+
                 <BoxInput
-                  type="number"
-                  label="ID ORIGEM"
-                  value={idOriginSolicitation}
-                  onChange={setIdOriginSolicitation}
+                  type="date"
+                  value={dateSolicitationSearch}
+                  onChange={setDateSolicitationSearch}
                 />
-                <BoxSelect
-                  label="ORIGEM"
-                  data={[
-                    { id: "1", name: "OPCAO 1" },
-                    { id: "2", name: "OPCAO 2" },
-                    { id: "3", name: "OPCAO 3" },
-                  ]}
-                  value={idSelectedOrigin}
-                  onChange={setIdSelectedOrigin}
+
+                <ButtonTables
+                  label="Carregar"
+                  colorText="#FFFFFF"
+                  colorPrimary="#38e808"
+                  colorSecondary="#44c521"
+                  link={`solicitation/view-date/0000-00-00`}
+                  icon="loading-white"
                 />
               </div>
-              <div className={styles.boxInputForId}>
-                <BoxInput
-                  type="number"
-                  label="ID DESTINO"
-                  value={idDestinySolicitation}
-                  onChange={setIdDestinySolicitation}
-                />
-                <BoxSelect
-                  label="ORIGEM"
-                  data={[
-                    { id: "1", name: "OPCAO 1" },
-                    { id: "2", name: "OPCAO 2" },
-                    { id: "3", name: "OPCAO 3" },
-                  ]}
-                  value={idSelectedDestiny}
-                  onChange={setIdSelectedDestiny}
-                />
-              </div>
-
-              <BoxInput
-                type="date"
-                label="DATA"
-                value={dateSolicitation}
-                onChange={setDateSolicitation}
-              />
-            </div>
-            <div className={styles.line}></div>
-            <div className={styles.boxCustody}>
-              <BoxInput
-                type="text"
-                label="R$ 10,00"
-                value={value10}
-                onChange={setValue10}
-              />
-              <div className={styles.containerValueReal}>
-                <div className={styles.valueReal}>
-                  {helppers.handleTransforInReal(
-                    helppers.handleCalcCassInReject("10", value10, 0)
-                  )}
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.boxCustody}>
-              <BoxInput
-                type="text"
-                label="R$ 20,00"
-                value={value20}
-                onChange={setValue20}
-              />
-              <div className={styles.containerValueReal}>
-                <div className={styles.valueReal}>
-                  {helppers.handleTransforInReal(
-                    helppers.handleCalcCassInReject("20", value20, 0)
-                  )}
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.boxCustody}>
-              <BoxInput
-                type="text"
-                label="R$ 50,00"
-                value={value50}
-                onChange={setValue50}
-              />
-              <div className={styles.containerValueReal}>
-                <div className={styles.valueReal}>
-                  {helppers.handleTransforInReal(
-                    helppers.handleCalcCassInReject("50", value50, 0)
-                  )}
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.boxCustody}>
-              <BoxInput
-                type="text"
-                label="R$ 100,00"
-                value={value100}
-                onChange={setValue100}
-              />
-              <div className={styles.containerValueReal}>
-                <div className={styles.valueReal}>
-                  {helppers.handleTransforInReal(
-                    helppers.handleCalcCassInReject("100", value100, 0)
-                  )}
-                </div>
-              </div>
-            </div>
-            <div className={styles.valuesTotal}>
-              {helppers.handleTransforInReal(
-                helppers.handleCalcTotal(value10, value20, value50, value100)
-              )}
-            </div>
-            <div className={styles.observation}>
-              <h3>Observação</h3>
-              <textarea></textarea>
-            </div>
-            <div className={styles.areaButton}>
-              <ButtonSystem label="Adicionar" icon="save-white" />
-            </div>
-          </div>
-          <div className={styles.areaRight}>
-            <h3>Pedidos Realizados</h3>
-            <div className={styles.list}>
-              <LineList id="1" label="Transportadora 1" value="R$ 18.000,00" />
-              <LineList id="2" label="Transportadora 2" value="R$ 250.000,00" />
-              <LineList
-                id="3"
-                label="Transportadora 3"
-                value="R$ 1.000.000,00"
-              />
-              <LineList id="4" label="Transportadora 4" value="R$ 18.000,00" />
-            </div>
-            <div className={styles.boxButtons}>
-              <ButtonTables
-                label="Excluir"
-                colorText="#FFFFFF"
-                colorPrimary="#c33a3a"
-                colorSecondary="#f12d2d"
-                link={`solicitation/delete/1`}
-                icon="delete-white"
-              />
-
-              <BoxInput
-                type="date"
-                label="DATA"
-                value={dateSolicitationSearch}
-                onChange={setDateSolicitationSearch}
-              />
-
-              <ButtonTables
-                label="Carregar"
-                colorText="#FFFFFF"
-                colorPrimary="#38e808"
-                colorSecondary="#44c521"
-                link={`solicitation/view-date/0000-00-00`}
-                icon="loading-white"
-              />
             </div>
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

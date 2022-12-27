@@ -1,0 +1,47 @@
+
+.container {
+}
+
+.box {
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.table{
+    width: 100%;
+}
+
+.table table {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    border-collapse: collapse;
+}
+
+.table table thead {
+    background-color: #CCC;
+}
+
+.table table thead tr{
+    margin-top: 5px;
+}
+
+.table table thead tr th{
+    border: 0;
+    padding: 10px;
+}
+
+.table table tbody tr td{
+    margin: 10px;
+    height: 45px;
+}
+
+.boxButtonsInTable{
+    display: flex;
+}

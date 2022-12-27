@@ -11,12 +11,13 @@ export const useHelppers = () => ({
   },
 
   handleCalcTotal: (valueA, valueB, valueC, valueD) => {
+    console.log(valueA)
     if (valueA == "") valueA = 0;
     if (valueB == "") valueB = 0;
     if (valueC == "") valueC = 0;
     if (valueD == "") valueD = 0;
     return (
-      parseInt(valueA) + parseInt(valueB) + parseInt(valueC) + parseInt(valueD)
+      (parseInt(valueA)*10) + (parseInt(valueB)*20) + (parseInt(valueC)*50) + (parseInt(valueD)*100)
     );
   },
 });
