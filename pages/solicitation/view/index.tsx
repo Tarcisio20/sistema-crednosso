@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import { BoxInput } from '../../../components/BoxInput'
+import { ButtonTables } from '../../../components/Buttons/ButtonTables'
 import { HeaderPersonal } from '../../../components/Headers/Header'
 import { HeaderInPage } from '../../../components/Headers/HeaderInPage'
 import styles from './style.module.css'
@@ -16,7 +18,119 @@ const ViewSolicitation = () => {
 
             <div className={styles.box}>
                 <HeaderInPage text="Solicitação | Ver" slug="solicitation" />
-
+                <div className={styles.areaUp}>
+                    <div className={styles.areaSearch}>
+                        <div className={styles.boxLeft}>
+                            <h4>Inicio</h4>
+                            <BoxInput
+                                type="date"
+                                value={''}
+                                onChange={()=>{}}
+                            />
+                        </div>
+                        <div className={styles.boxRight}>
+                            <h4>Fim</h4>
+                                <BoxInput
+                                    type="date"
+                                    value={''}
+                                    onChange={()=>{}}
+                                />
+                        </div>
+                        <div className={styles.boxButton}>
+                            <ButtonTables
+                                label="pesquisar"
+                                colorText="#ffffff"
+                                colorPrimary="#c33a3a"
+                                colorSecondary="#f12d2d"
+                                link={`atm/delete/1`}
+                                icon="delete-white"
+                            /> 
+                        </div>
+                    </div>
+                    <div className={styles.line}></div>
+                    <div className={styles.areaButtons}>
+                        <ButtonTables
+                            label="confirmar parcial"
+                            colorText="#ffffff"
+                            colorPrimary="#c33a3a"
+                            colorSecondary="#f12d2d"
+                            link={`atm/delete/1`}
+                            icon="delete-white"
+                        /> 
+                         <ButtonTables
+                            label="confirmar total"
+                            colorText="#ffffff"
+                            colorPrimary="#c33a3a"
+                            colorSecondary="#f12d2d"
+                            link={`atm/delete/1`}
+                            icon="delete-white"
+                        /> 
+                         <ButtonTables
+                            label="gerar lançamento"
+                            colorText="#ffffff"
+                            colorPrimary="#c33a3a"
+                            colorSecondary="#f12d2d"
+                            link={`atm/delete/1`}
+                            icon="delete-white"
+                        /> 
+                         <ButtonTables
+                            label="gerar pagamento"
+                            colorText="#ffffff"
+                            colorPrimary="#c33a3a"
+                            colorSecondary="#f12d2d"
+                            link={`atm/delete/1`}
+                            icon="delete-white"
+                        /> 
+                         <ButtonTables
+                            label="relançar pedido"
+                            colorText="#ffffff"
+                            colorPrimary="#c33a3a"
+                            colorSecondary="#f12d2d"
+                            link={`atm/delete/1`}
+                            icon="delete-white"
+                        /> 
+                         <ButtonTables
+                            label="gerar relatório"
+                            colorText="#ffffff"
+                            colorPrimary="#c33a3a"
+                            colorSecondary="#f12d2d"
+                            link={`atm/delete/1`}
+                            icon="delete-white"
+                        /> 
+                         <ButtonTables
+                            label="excluir"
+                            colorText="#ffffff"
+                            colorPrimary="#c33a3a"
+                            colorSecondary="#f12d2d"
+                            link={`atm/delete/1`}
+                            icon="delete-white"
+                        /> 
+                         <ButtonTables
+                            label="enviar e-mail"
+                            colorText="#ffffff"
+                            colorPrimary="#c33a3a"
+                            colorSecondary="#f12d2d"
+                            link={`atm/delete/1`}
+                            icon="delete-white"
+                        /> 
+                         <ButtonTables
+                            label="abrir OSs"
+                            colorText="#ffffff"
+                            colorPrimary="#c33a3a"
+                            colorSecondary="#f12d2d"
+                            link={`atm/delete/1`}
+                            icon="delete-white"
+                        /> 
+                         <ButtonTables
+                            label="visualizar"
+                            colorText="#ffffff"
+                            colorPrimary="#c33a3a"
+                            colorSecondary="#f12d2d"
+                            link={`atm/delete/1`}
+                            icon="delete-white"
+                        /> 
+                    </div>
+                </div>
                 <div className={styles.table}>
                     <table>
                         <thead>
@@ -30,6 +144,31 @@ const ViewSolicitation = () => {
                             </tr>
                         </thead>
                         <tbody>
+                            <tr>
+                                <td>15684</td>
+                                <td>entre tesourarias</td>
+                                <td>Mateus SUpermercados</td>
+                                <td>Prosegur Fortaleza</td>
+                                <td>R$ 1.000.000,00</td>
+                                <td className={styles.boxButtonsInTable} > 
+                                   <ButtonTables
+                                        label="Editar"
+                                        colorText="#ffffff"
+                                        colorPrimary="#007dc5"
+                                        colorSecondary="#007dc5"
+                                        link={`atm/edit/1`}
+                                        icon="edit-white"
+                                   /> 
+                                     <ButtonTables
+                                        label="Deletar"
+                                        colorText="#ffffff"
+                                        colorPrimary="#c33a3a"
+                                        colorSecondary="#f12d2d"
+                                        link={`atm/delete/1`}
+                                        icon="delete-white"
+                                   /> 
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

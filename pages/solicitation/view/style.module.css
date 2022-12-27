@@ -13,6 +13,28 @@
   justify-content: center;
 }
 
+.areaSearch{
+    display: flex;
+}
+
+.line{
+    width: 100%;
+    border: 1px solid #999999;
+    margin: 10px 0;
+}
+
+.areaButtons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.areaButtons a {
+    max-width: 200px;
+}
+
 .table{
     width: 100%;
 }
