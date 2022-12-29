@@ -28,27 +28,33 @@ const AtmAdd = () => {
 
                 <div className={styles.boxInputs}>
                     <h3>Informações</h3>
-                    <BoxInput
-                        type='text'
-                        label="ID SISTEMA"
-                        placeholder='Digite o ID que se encontra no sistema CredNosso'
-                        value={idSystem}
-                        onChange={setIdSystem}
-                    />
-                    <BoxInput
-                        type='text'
-                        label="NOME"
-                        placeholder='Digite o nome do terminal'
-                        value={nameSystem}
-                        onChange={setNameSystem}
-                    />
-                    <BoxInput
-                        type='text'
-                        label="N REDUZIDO"
-                        placeholder='Digite o nome reduzido do terminal'
-                        value={nameSystemReduz}
-                        onChange={setNameSystemReduz}
-                    />
+                    <div className={styles.boxItems}>
+                        <h4>ID SISTEMA</h4>
+                        <BoxInput
+                            type='text'
+                            placeholder='Digite o ID que se encontra no sistema CredNosso'
+                            value={idSystem}
+                            onChange={setIdSystem}
+                        />
+                    </div>
+                    <div className={styles.boxItems}>
+                        <h4>NOME SISTEMA</h4>
+                        <BoxInput
+                            type='text'
+                            placeholder='Digite o nome do terminal'
+                            value={nameSystem}
+                            onChange={setNameSystem}
+                        />
+                    </div>
+                    <div className={styles.boxItems}>
+                        <h4>NOME REDUZIDO</h4>
+                        <BoxInput
+                            type='text'
+                            placeholder='Digite o nome reduzido do terminal'
+                            value={nameSystemReduz}
+                            onChange={setNameSystemReduz}
+                        />
+                    </div>
                 </div>
                 <div className={styles.boxButton}>
                     <ButtonSystem

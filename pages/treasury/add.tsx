@@ -26,20 +26,29 @@ const TreasuryAdd = () => {
                 <HeaderInPage text="Tesouraria | Adicionar" slug="treasury"  />
                 <div className={styles.boxInputs}>
                     <h3>Informações</h3>
-                    <BoxInput
-                        type='text'
-                        label="ID SISTEMA"
-                        placeholder='Digite o ID que se encontra no sistema CredNosso'
-                        value={idSytem}
-                        onChange={setIdSystem}
-                    />
-                    <BoxInput
-                        type='text'
-                        label="NOME"
-                        placeholder='Digite o nome da Transportadora'
-                        value={nameSytem}
-                        onChange={setNameSystem}
-                    />
+                    <div className={styles.boxItems}>
+                        <h4>ID SISTEMA</h4>
+                        <BoxInput
+                            type='text'
+                            placeholder='Digite o ID que se encontra no sistema CredNosso'
+                            value={idSytem}
+                            onChange={setIdSystem}
+                        />
+                    </div>
+                    <div className={styles.boxItems}>
+                        <h4>NOME SISTEMA</h4>
+                        <BoxInput
+                            type='text'
+                            placeholder='Digite o nome da Transportadora'
+                            value={nameSytem}
+                            onChange={setNameSystem}
+                        />
+                    </div>
+                    <div className={styles.boxItems}>
+                        <h4>E-MAILS</h4>
+                        <p>Colocar os e-mails separados por virgula</p>
+                        <textarea></textarea>
+                    </div>
                 </div>
                 <div className={styles.boxButton}>
                     <ButtonSystem

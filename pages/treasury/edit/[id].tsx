@@ -28,26 +28,30 @@ const TreasuryEdit = () => {
                 <HeaderInPage text="Tesouraria | Editar" slug="treasury"  />
                 <div className={styles.boxInputs}>
                 <h3>Informações</h3>
+                <div className={styles.boxItems}>
+                    <h4>ID SISTEMA</h4>
                     <BoxInput
                         type='text'
-                        label="ID SISTEMA"
                         value={idSytem}
                         onChange={setIdSystem}
                     />
+                </div>
+                <div className={styles.boxItems}>
+                    <h4>NOME SISTEMA</h4>
                     <BoxInput
                         type='text'
-                        label="NOME"
                         value={nameSytem}
                         onChange={setNameSystem}
                     />
+                </div>
                 </div>
                 <div className={styles.boxComposition}>
                     <h3>Custodia</h3>
 
                     <div className={styles.boxCustody}>
+                        <h4>R$ 10,00</h4>
                         <BoxInput
                             type='text'
-                            label="R$ 10,00"
                             value={valueCass10}
                             onChange={setValueCass10}
                         />
@@ -57,9 +61,9 @@ const TreasuryEdit = () => {
                     </div>
 
                     <div className={styles.boxCustody}>
+                        <h4>R$ 20,00</h4>
                         <BoxInput
                             type='text'
-                            label="R$ 20,00"
                             value={valueCass20}
                             onChange={setValueCass20}
                         />
@@ -69,9 +73,9 @@ const TreasuryEdit = () => {
                     </div>
 
                     <div className={styles.boxCustody}>
+                        <h4>R$ 50,00</h4>
                         <BoxInput
                             type='text'
-                            label="R$ 50,00"
                             value={valueCass50}
                             onChange={setValueCass50}
                         />
@@ -81,9 +85,9 @@ const TreasuryEdit = () => {
                     </div>
 
                     <div className={styles.boxCustody}>
+                        <h4>R$ 100,00</h4>
                         <BoxInput
                             type='text'
-                            label="R$ 100,00"
                             value={valueCass100}
                             onChange={setValueCass100}
                         />

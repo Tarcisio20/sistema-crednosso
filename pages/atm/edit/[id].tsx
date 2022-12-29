@@ -56,37 +56,43 @@ const AtmEdit = () => {
                 <HeaderInPage text="Atm | Editar" slug="atm"  />
                 <div className={styles.boxInputs}>
                     <h3>Informações</h3>
-                    <BoxInput
-                        type='text'
-                        label="ID SISTEMA"
-                        value={idSystem}
-                        onChange={setIdSystem}
-                    />
-                    <BoxInput
-                        type='text'
-                        label="NOME"
-                        value={nameSystem}
-                        onChange={setNameSystem}
-                    />
-                    <BoxInput
-                        type='text'
-                        label="N REDUZIDO"
-                        value={nameSystemReduz}
-                        onChange={setNameSystemReduz}
-                    />
+                    <div className={styles.boxItems}>
+                        <h4>ID SISTEMA</h4>
+                        <BoxInput
+                            type='text'
+                            value={idSystem}
+                            onChange={setIdSystem}
+                        />
+                    </div>
+                    <div className={styles.boxItems}>
+                        <h4>NOME SISTEMA</h4>
+                        <BoxInput
+                            type='text'
+                            value={nameSystem}
+                            onChange={setNameSystem}
+                        />
+                    </div>
+                    <div className={styles.boxItems}>
+                            <h4>NOME REDUZIDO</h4>
+                        <BoxInput
+                            type='text'
+                            value={nameSystemReduz}
+                            onChange={setNameSystemReduz}
+                        />
+                    </div>
                 </div>
                 <div className={styles.boxComposition}>
                     <h3>Custodia</h3>
                     <div className={styles.boxCustody}>
+                        <h4>R$ 10,00</h4>
                         <BoxInput
                             type='text'
-                            label="R$ 10,00"
                             value={valueCass10}
                             onChange={setValueCass10}
                         />
+                        <h4>REJ.</h4>
                            <BoxInput
                             type='text'
-                            label="REJEIÇÃO"
                             value={valueReject10}
                             onChange={setValueReject10}
                         />
@@ -98,15 +104,15 @@ const AtmEdit = () => {
                     </div>
 
                     <div className={styles.boxCustody}>
+                        <h4>R$ 20,00</h4>
                         <BoxInput
                             type='text'
-                            label="R$ 20,00"
                             value={valueCass20}
                             onChange={setValueCass20}
                         />
+                        <h4>REJ.</h4>
                            <BoxInput
                             type='text'
-                            label="REJEIÇÃO"
                             value={valueReject20}
                             onChange={setValueReject20}
                         />
@@ -118,15 +124,15 @@ const AtmEdit = () => {
                     </div>
 
                     <div className={styles.boxCustody}>
+                        <h4>R$ 50,00</h4>
                         <BoxInput
                             type='text'
-                            label="R$ 50,00"
                             value={valueCass50}
                             onChange={setValueCass50}
                         />
+                        <h4>REJ.</h4>
                            <BoxInput
                             type='text'
-                            label="REJEIÇÃO"
                             value={valueReject50}
                             onChange={setValueReject50}
                         />
@@ -138,15 +144,15 @@ const AtmEdit = () => {
                     </div>
 
                     <div className={styles.boxCustody}>
+                        <h4>R$ 100,00</h4>
                         <BoxInput
                             type='text'
-                            label="R$ 100,00"
                             value={valueCass100}
                             onChange={setValueCass100}
                         />
+                        <h4>REJ.</h4>
                            <BoxInput
                             type='text'
-                            label="REJEIÇÃO"
                             value={valueReject100}
                             onChange={setValueReject100}
                         />

@@ -29,6 +29,9 @@ export const HeaderPersonal = ({ slug } : Props) => {
                     <li>
                         <Link href="/solicitation">Solicitações</Link>
                     </li>
+                    <li>
+                        <Link href="/images">Imagens</Link>
+                    </li>
                 </ul>
             </div>
         </div>

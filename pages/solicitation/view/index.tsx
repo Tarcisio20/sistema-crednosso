@@ -40,10 +40,10 @@ const ViewSolicitation = () => {
                             <ButtonTables
                                 label="pesquisar"
                                 colorText="#ffffff"
-                                colorPrimary="#c33a3a"
-                                colorSecondary="#f12d2d"
+                                colorPrimary="#74ea50"
+                                colorSecondary="#6ebe55"
                                 link={`atm/delete/1`}
-                                icon="delete-white"
+                                icon="search-white"
                             /> 
                         </div>
                     </div>
@@ -52,50 +52,75 @@ const ViewSolicitation = () => {
                         <ButtonTables
                             label="confirmar parcial"
                             colorText="#ffffff"
-                            colorPrimary="#c33a3a"
-                            colorSecondary="#f12d2d"
+                            colorPrimary="#007dc5"
+                            colorSecondary="#1b1b54"
                             link={`atm/delete/1`}
-                            icon="delete-white"
+                            icon="partial-white"
                         /> 
                          <ButtonTables
                             label="confirmar total"
                             colorText="#ffffff"
-                            colorPrimary="#c33a3a"
-                            colorSecondary="#f12d2d"
+                            colorPrimary="#007dc5"
+                            colorSecondary="#1b1b54"
                             link={`atm/delete/1`}
-                            icon="delete-white"
+                            icon="confirmation-white"
                         /> 
                          <ButtonTables
                             label="gerar lançamento"
                             colorText="#ffffff"
-                            colorPrimary="#c33a3a"
-                            colorSecondary="#f12d2d"
+                            colorPrimary="#007dc5"
+                            colorSecondary="#1b1b54"
                             link={`atm/delete/1`}
-                            icon="delete-white"
+                            icon="release-white"
                         /> 
                          <ButtonTables
                             label="gerar pagamento"
                             colorText="#ffffff"
-                            colorPrimary="#c33a3a"
-                            colorSecondary="#f12d2d"
+                            colorPrimary="#007dc5"
+                            colorSecondary="#1b1b54"
                             link={`atm/delete/1`}
-                            icon="delete-white"
+                            icon="pay-white"
                         /> 
                          <ButtonTables
                             label="relançar pedido"
                             colorText="#ffffff"
-                            colorPrimary="#c33a3a"
-                            colorSecondary="#f12d2d"
+                            colorPrimary="#007dc5"
+                            colorSecondary="#1b1b54"
                             link={`atm/delete/1`}
-                            icon="delete-white"
+                            icon="reply-white"
                         /> 
                          <ButtonTables
                             label="gerar relatório"
                             colorText="#ffffff"
-                            colorPrimary="#c33a3a"
-                            colorSecondary="#f12d2d"
+                            colorPrimary="#007dc5"
+                            colorSecondary="#1b1b54"
                             link={`atm/delete/1`}
-                            icon="delete-white"
+                            icon="report-white"
+                        /> 
+            
+                         <ButtonTables
+                            label="enviar e-mail"
+                            colorText="#ffffff"
+                            colorPrimary="#007dc5"
+                            colorSecondary="#1b1b54"
+                            link={`atm/delete/1`}
+                            icon="email-white"
+                        /> 
+                         <ButtonTables
+                            label="abrir OSs"
+                            colorText="#ffffff"
+                            colorPrimary="#007dc5"
+                            colorSecondary="#1b1b54"
+                            link={`atm/delete/1`}
+                            icon="open-white"
+                        /> 
+                         <ButtonTables
+                            label="visualizar"
+                            colorText="#ffffff"
+                            colorPrimary="#007dc5"
+                            colorSecondary="#1b1b54"
+                            link={`atm/delete/1`}
+                            icon="view-white"
                         /> 
                          <ButtonTables
                             label="excluir"
@@ -105,31 +130,8 @@ const ViewSolicitation = () => {
                             link={`atm/delete/1`}
                             icon="delete-white"
                         /> 
-                         <ButtonTables
-                            label="enviar e-mail"
-                            colorText="#ffffff"
-                            colorPrimary="#c33a3a"
-                            colorSecondary="#f12d2d"
-                            link={`atm/delete/1`}
-                            icon="delete-white"
-                        /> 
-                         <ButtonTables
-                            label="abrir OSs"
-                            colorText="#ffffff"
-                            colorPrimary="#c33a3a"
-                            colorSecondary="#f12d2d"
-                            link={`atm/delete/1`}
-                            icon="delete-white"
-                        /> 
-                         <ButtonTables
-                            label="visualizar"
-                            colorText="#ffffff"
-                            colorPrimary="#c33a3a"
-                            colorSecondary="#f12d2d"
-                            link={`atm/delete/1`}
-                            icon="delete-white"
-                        /> 
                     </div>
+                    <div className={styles.line}></div>
                 </div>
                 <div className={styles.table}>
                     <table>

@@ -32,11 +32,13 @@
     width: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 5px;
 
 }
 
 .boxCustody input {
-    width: 50%;
+    width: 30%;
 }
 
 .containerValueReal{
@@ -71,3 +73,15 @@
 .boxButton{
     max-width: 1600px;
 }
+
+.boxItems{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .boxItems input{
+    width: 60%;
+  }
